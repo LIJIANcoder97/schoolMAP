@@ -1,0 +1,26 @@
+/* pages/content/content.wxss */
+.itemCo{
+  width: 100%;
+  height: 12vh;
+  border-bottom: 1rpx solid #bfbfbf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.leCo{
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
+.img
+{
+  color:#00478a;
+  margin-right: 5%;
+  margin-left: 7%;
+ font-size:larger; 
+}
+.imgr{
+  margin-right: 6%;
+  width: 80rpx;
+  height: 80rpx;
+}

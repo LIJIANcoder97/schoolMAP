@@ -1,0 +1,51 @@
+<!-- white-space
+ normal: 正常无变化(默认处理方式.文本自动处理换行.假如抵达容器边界内容会转到下一行)
+ pre: 保持HTML源代码的空格与换行,等同与pre标签
+ nowrap: 强制文本在一行,除非遇到br换行标签
+ pre-wrap: 同pre属性,但是遇到超出容器范围的时候会自动换行
+ pre-line: 同pre属性,但是遇到连续空格会被看作一个空格
+ inherit: 继承
+-->
+
+<view style='width:100%;height:100vh'>
+  <scroll-view scroll-x="true"scroll-into-view='Y66' style=" white-space: nowrap;height:5%; background:#00478a; display: flex">
+    <!-- display: inline-block-->
+    <view style=" width: 20rpx;color:#DCDCDC; display: inline-block"></view>
+    <!--<view style=" width: 130rpx;color:{{welcome}};  display: inline-block">迎接处</view>-->
+    <view bindtap='stduyBuild' style=" width: 130rpx;color:{{stduyBuild}}; display: inline-block">教学楼</view>
+    <view bindtap='Door' style=" width: 130rpx;color:{{Door}};  display: inline-block">出入门</view>
+    <view bindtap='View'style=" width: 90rpx;color:{{View}};  display: inline-block">景点</view>
+    <view bindtap='libiary' style=" width: 130rpx;color:{{libiary}};  display: inline-block">图书馆</view>
+    <view bindtap='culture' style=" width: 170rpx;color:{{culture}};  display: inline-block">文化场馆</view>
+    <view bindtap='Home'style=" width: 90rpx;color:{{Home}};  display: inline-block">公寓</view>
+    <view bindtap='gym'style=" width: 130rpx;color:{{gym}};  display: inline-block">体育馆</view>
+    <view bindtap='rest'style=" width: 90rpx;color:{{rest}};  display: inline-block">食堂</view>
+    <view bindtap='super' style=" width: 90rpx;color:{{super}};  display: inline-block">超市</view>
+    <view bindtap='other' style=" width: 90rpx;color:{{other}};  display: inline-block">周边</view>
+  </scroll-view>
+
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" controls="{{controls}}"       bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}"           bindregionchange="regionchange" show-location
+    style="width: 100%; height:{{map}};include-points='{{points}}'"></map>
+
+  <view class='ll' style='width:100%;height:4%;' >
+    <image bindtap='close' class='v' src='{{v}}'  style='width:30rpx;height:30rpx;' ></image>
+  </view>
+  <view style='width:100%;height:1%; background:#ececec ' ></view>
+
+  <scroll-view scroll-y='true'scroll-into-view='{{toview}}' style='width:100%;height:{{low}};'>
+    <view  class='container1' wx:for="{{currentList}}">
+      <view id='{{item.id}}' class='itemCo'> 
+        <navigator class='leCo'hover-class='none' url='/pages/content/content?content={{item.content}}&&title={{item.text}}&&pic={{item.pic}}&&longitude={{item.longitude}}&&latitude={{item.latitude}}'>
+          <image src='{{item.pic}}' class='img'></image>
+          <text>{{item.text}}</text>
+        </navigator>
+        <navigator class='imgr' hover-class='none' url='/pages/logs/logs?longitude={{item.longitude}}&&latitude={{item.latitude}}'>
+        <image class='imgr' src='../image/navigation.png' ></image>
+        </navigator>
+        
+      </view>
+    </view>
+
+  </scroll-view>
+ 
+</view>

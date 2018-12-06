@@ -1,0 +1,16 @@
+
+<image style='width:100%; height:35vh;' src='{{pic}}'></image>
+
+
+
+ 
+<view  class='itemCo'> 
+          <text class='img'>{{title}}</text>
+        <navigator class='imgr' hover-class='none' url='/pages/logs/logs?longitude={{longitude}}&&latitude={{latitude}}'>
+        <image class='imgr' src='../image/navigation.png' ></image>
+        </navigator>
+      </view>
+<view style='background:#F5F5F5;height:53vh;'>
+<text style='font-family: SimSun,"Times New Roman",Serif;'>{{content}}</text>
+</view>
+

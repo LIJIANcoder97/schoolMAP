@@ -1,0 +1,10 @@
+<!--pages/share/share.wxml-->
+ <view style='background:#F5F5F5;height:100vh;'>
+
+<image style='width:100%; height:40vh;' src='../image/2JAO.jpg'></image>
+ <view style='height:5vh;'></view>
+
+<text style='font-family: SimSun,"Times New Roman",Serif;'>长按分享</text>
+</view>
+
+
